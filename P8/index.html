@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>XHTML form</title>
+    <style>
+      #f {
+        width: 100%;
+        height: 300px;
+        border: 1px solid;
+      }
+
+      h2 {
+        text-align: center;
+      }
+      #cont {
+        margin: 35px;
+      }
+      input[type="text"] {
+        margin-bottom: 10px;
+      }
+    </style>
+    <script>
+      function validateFormAndCalc() {
+        let usn = document.getElementById("regno").value;
+        let code = document.getElementById("subcode").value;
+        let m1 = parseInt(document.getElementById("marks-1").value);
+        let m2 = parseInt(document.getElementById("marks-2").value);
+        let m3 = parseInt(document.getElementById("marks-3").value);
+
+        if (m1 > 20 || m2 > 20 || m3 > 20) {
+          alert("Enter valid marks");
+          return;
+        }
+
+        let information =
+          "USN: " +
+          usn +
+          "\n" +
+          "Subject Code: " +
+          code +
+          "\n" +
+          "Marks 1: " +
+          m1 +
+          "\n" +
+          "Marks 2: " +
+          m2 +
+          "\n" +
+          "Marks 3: " +
+          m3 +
+          "\n";
+        console.log(information);
+        marks = [m1, m2, m3];
+        marks.sort();
+        let avg = (marks[1] + marks[2]) / 2;
+        alert(`The average is ${avg}`);
+        alert(`${information}`);
+      }
+    </script>
+  </head>
+
+  <body>
+    <div>
+      <h2>XHTML Form</h2>
+    </div>
+    <div id="f">
+      <form>
+        <div id="cont" align="center">
+          <label for="regno">Register Number (USN)</label>
+          <input type="text" id="regno" required="required" />
+          <br />
+
+          <label for="subcode">Subject Code</label>
+          <input type="text" id="subcode" required="required" />
+          <br />
+
+          <label for="marks-1">Test 1 Marks</label>
+          <input type="text" id="marks-1" required="required" />
+          <br />
+
+          <label for="marks-2">Test 2 Marks</label>
+          <input type="text" id="marks-2" required="required" />
+          <br />
+
+          <label for="marks-3">Test 3 Marks</label>
+          <input type="text" id="marks-3" required="required" />
+          <br />
+        </div>
+
+        <div align="center">
+          <button type="submit" class="btn" onclick="validateFormAndCalc()">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

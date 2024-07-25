@@ -1,0 +1,12 @@
+/* External CSS for the links section */
+#links {
+    background-color: lightblue;
+    text-align: center;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Adds space between the divs */
+}
+
+

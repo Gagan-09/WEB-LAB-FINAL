@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Demonstration</title>
+    <style>
+      /* I. Demonstrating different font styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      p.serif {
+        font-family: serif;
+      }
+
+      p.sans-serif {
+        font-family: sans-serif;
+      }
+
+      p.monospace {
+        font-family: monospace;
+      }
+
+      /* II. Controlling the repetition of image with background-repeat property */
+      .no-repeat {
+        width: 150px;
+        height: 150px;
+        background-image: url("./orange.jpeg");
+        background-repeat: no-repeat;
+        border: 1px solid #ccc;
+      }
+
+      .repeat {
+        width: 400px;
+        height: 400px;
+        background-image: url("./orange.jpeg");
+        background-repeat: repeat;
+        border: 1px solid #ccc;
+      }
+
+      /* III. Defining style for links */
+      a:link {
+        color: blue;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: purple;
+      }
+
+      a:hover {
+        color: orange;
+        text-decoration: underline;
+      }
+
+      a:active {
+        color: red;
+      }
+
+      /* IV. Demonstrating element visibility property */
+      .visible {
+        visibility: visible;
+      }
+
+      .hidden {
+        visibility: hidden;
+      }
+
+      .collapse {
+        visibility: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Property Demonstration</h1>
+
+    <h2>I. Font Styles</h2>
+    <p class="serif">This is a paragraph with a serif font.</p>
+    <p class="sans-serif">This is a paragraph with a sans-serif font.</p>
+    <p class="monospace">This is a paragraph with a monospace font.</p>
+
+    <h2>II. Background Repeat</h2>
+    <div class="no-repeat">No Repeat</div>
+    <br /><br />
+    <div class="repeat">Repeat</div>
+
+    <h2>III. Link Styles</h2>
+    <p><a href="https://www.google.com">This is a link</a></p>
+
+    <h2>IV. Element Visibility</h2>
+    <p class="visible">This element is visible.</p>
+    <p class="hidden">This element is hidden.</p>
+    <!-- <p class="collapse">This element is collapsed.</p> -->
+  </body>
+</html>
